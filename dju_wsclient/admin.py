@@ -1,3 +1,6 @@
 from django.contrib import admin
+from dju_wsclient.models import WSSite, WSService, WSCache
 
-# Register your models here.
+admin.site.register(WSSite)
+admin.site.register(WSService)
+admin.site.register(WSCache)
