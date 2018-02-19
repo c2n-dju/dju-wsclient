@@ -1,0 +1,27 @@
+{% extends "dju_publi/base.html" %}
+{% load staticfiles static %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="alert alert-success alert-dismissable">
+      <center>Bienvenue <strong>{{ user }}</strong><button type="button" class="close">&times;</button></center>
+    </div>
+  </div>
+  <center><font size="32"><strong>Cette application est géniale</strong></font></center>
+</div>
+
+<script src="{% static "js/jquery.js" %}"></script>
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+<script>
+  $(function() {
+    $("#afficher").click(function() {
+      $("#afficher").hide();
+      $(".alert").show("slow");
+    });
+    $(".close").click(function() {
+      $(".alert").hide("slow");
+      $("#afficher").show();
+    });
+  });
+</script>
+{% endblock %}
